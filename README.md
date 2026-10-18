@@ -26,6 +26,14 @@ The sales invoice screen demonstrates the workflow for creating and managing sal
 
 ![Sales Invoice](screenshots/sales-invoice.png)
 
+## Inventory Management
+
+### Product Management
+
+This screen displays the product catalog, including product names, product groups, prices, and product management actions.
+
+![Product Management](screenshots/product-management.png)
+
 ## Key Features
 
 - **Sales & Purchase Management:** Manage sales and purchase invoices.
