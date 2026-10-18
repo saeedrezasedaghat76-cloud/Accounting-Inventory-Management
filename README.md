@@ -46,7 +46,7 @@ This report tracks incoming and outgoing product quantities, related invoices, t
 
 ## Sales & Purchase Management
 
-### Sales Invoice
+### Sales & Purchase Invoice
 
 The sales invoice screen demonstrates the workflow for creating and managing sales invoices.
 
