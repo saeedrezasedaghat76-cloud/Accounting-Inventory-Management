@@ -1,8 +1,19 @@
 # Accounting & Inventory Management System
 
-A web-based business application for managing accounting operations, sales and purchase invoices, inventory, payments, cheques, and financial reporting.
+An integrated business management application designed for small and large businesses to manage their accounting, financial transactions, sales and purchase invoices, payments, cheques, and inventory operations in one system.
+
+The application helps businesses organize financial records, track inventory movements, manage day-to-day transactions, and monitor business performance through financial reports and dashboard analytics.
 
 This project demonstrates my experience developing business-oriented applications using C#, ASP.NET Core, Entity Framework Core, and SQL Server.
+
+## Target Users
+
+The system is designed to support different business sizes and operational needs, including:
+
+- **Business Owners and Managers:** Monitoring financial performance, sales, and inventory status.
+- **Accounting Staff:** Managing accounts, financial transactions, receipts, payments, and accounting documents.
+- **Sales and Purchasing Staff:** Managing sales and purchase invoices.
+- **Inventory Staff:** Managing products, tracking stock movements, and monitoring inventory levels.
 
 ## Technical Stack
 
