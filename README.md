@@ -1,7 +1,6 @@
-
 # Accounting & Inventory Management System
 
-A web-based business application for managing accounting operations, sales and purchase invoices, inventory, payments, and financial reporting.
+A web-based business application for managing accounting operations, sales and purchase invoices, inventory, payments, cheques, and financial reporting.
 
 This project demonstrates my experience developing business-oriented applications using C#, ASP.NET Core, Entity Framework Core, and SQL Server.
 
@@ -18,6 +17,8 @@ The dashboard provides a consolidated view of daily and monthly sales and profit
 The dashboard includes sales and profit charts for the last 30 days, top-selling products, and low-stock product monitoring.
 
 ![Sales and Inventory Analytics](screenshots/sales-inventory-analytics.png)
+
+## Sales & Purchase Management
 
 ### Sales Invoice
 
@@ -56,7 +57,7 @@ Key design areas include:
 
 ## My Role
 
-I developed the application’s backend and business functionality, working with application architecture, data access, accounting workflows, inventory operations, and dashboard reporting.
+I developed the application's backend and business functionality, working with application architecture, data access, accounting workflows, inventory operations, and dashboard reporting.
 
 ## Project Showcase
 
