@@ -24,7 +24,7 @@ The dashboard includes sales and profit charts for the last 30 days, top-selling
 
 The sales invoice screen demonstrates the workflow for creating and managing sales invoices.
 
-![Sales Invoice](screenshots/sales-invoice.png)
+![Sales Invoice](screenshots/Sales Invoice.png)
 
 ## Key Features
 
