@@ -37,6 +37,17 @@ The dashboard includes sales and profit charts for the last 30 days, top-selling
 - **Authentication & Authorization:** ASP.NET Core Identity
 - **Architecture:** Clean Architecture and CQRS
 
+## Architecture & Design
+
+The application is organized around business operations, with a focus on separation of concerns, maintainability, and reliable data management.
+
+Key design areas include:
+
+- **Clean Architecture:** Separating application responsibilities into distinct layers.
+- **CQRS:** Organizing supported operations into commands and queries.
+- **Data Access:** Using Entity Framework Core to work with SQL Server.
+- **Business Logic:** Supporting accounting, sales, inventory, cheque tracking, and financial reporting workflows.
+
 ## My Role
 
 I developed the application’s backend and business functionality, working with application architecture, data access, accounting workflows, inventory operations, and dashboard reporting.
