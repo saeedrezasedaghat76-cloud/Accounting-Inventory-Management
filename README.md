@@ -19,6 +19,12 @@ The dashboard includes sales and profit charts for the last 30 days, top-selling
 
 ![Sales and Inventory Analytics](screenshots/sales-inventory-analytics.png)
 
+### Sales Invoice
+
+The sales invoice screen demonstrates the workflow for creating and managing sales invoices.
+
+![Sales Invoice](screenshots/sales-invoice.png)
+
 ## Key Features
 
 - **Sales & Purchase Management:** Manage sales and purchase invoices.
