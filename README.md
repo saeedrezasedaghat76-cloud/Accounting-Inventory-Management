@@ -48,6 +48,12 @@ The sales invoice screen demonstrates the workflow for creating and managing sal
 
 The application is organized around business operations, with a focus on separation of concerns, maintainability, and reliable data management.
 
+### Solution Structure and CQRS
+
+The solution is organized into four projects: Domain, Application, Infrastructure, and Presentation. The Application layer uses commands and queries to organize supported operations and maintain separation of concerns.
+
+![Solution Structure and CQRS](screenshots/clean-architecture-solution.png)
+
 Key design areas include:
 
 - **Clean Architecture:** Separating application responsibilities into distinct layers.
