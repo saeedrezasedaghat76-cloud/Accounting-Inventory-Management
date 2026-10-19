@@ -41,6 +41,33 @@ Key design areas include:
 - **Data Access:** Using Entity Framework Core to work with SQL Server.
 - **Business Logic:** Supporting accounting, sales, inventory, cheque tracking, and financial reporting workflows.
 
+  ## User & Role Permission Management
+
+The application implements role-based access control using ASP.NET Core Identity, allowing administrators to manage roles, assign users to roles, and configure permissions for specific application operations.
+
+### Role-Based Access Control
+
+Administrators can assign permissions to roles to control which operations users assigned to those roles are allowed to access. This approach helps organize authorization rules and manage access consistently across different areas of the application.
+
+### Permission Management
+
+The permission management interface allows administrators to add permissions to a role and remove existing permissions when access needs to be changed. Permissions are represented by claims associated with roles, providing a flexible way to define authorization rules for application functionality.
+
+For example, product-related permissions include:
+
+- **View Products:** Control access to the product listing page.
+- **Add Products:** Manage access to product creation operations.
+- **Edit Products:** Control access to product editing functionality.
+- **Delete Products:** Manage access to product deletion operations.
+
+### Implementation
+
+This functionality uses ASP.NET Core Identity's `RoleManager` and `UserManager` to manage roles, role claims, and user-role assignments. Entity Framework Core integrates identity-related entities with the application's database.
+
+This design separates user management, role assignment, and permission configuration, making access control easier to maintain as the application grows.
+
+![Role Permission Management](screenshots/role-permission-management.png)
+
 ## Product & Inventory Management
 
 ### Product Management
