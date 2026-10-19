@@ -72,7 +72,7 @@ The project uses **Clean Architecture** to separate responsibilities and **CQRS*
 
 ## Selected Application Screenshots
 
-The following screenshots highlight seven selected areas of the application rather than documenting every page. Each example focuses on a practical business problem and the functionality provided to address it.
+The following screenshots highlight selected areas of the application. Each example focuses on a practical business problem and the functionality provided to address it.
 
 ### 1. User & Role Permission Management
 
@@ -123,6 +123,26 @@ The following screenshots highlight seven selected areas of the application rath
 **Business Value:** Helps users monitor business performance and identify products that may require replenishment.
 
 ![Sales and Inventory Analytics](screenshots/sales-inventory-analytics.png)
+
+### 6. Cheque Management & Reporting
+
+**Problem:** Businesses need to track cheque statuses, payment obligations, and upcoming due dates to maintain visibility over financial commitments.
+
+**Solution:** The cheque dashboard summarizes cheque counts and amounts by status, including registered, paid, and returned cheques. It also provides access to reports for overdue cheques and cheques due within the next 7 or 30 days.
+
+**Business Value:** Helps accounting staff monitor cheque obligations, identify overdue payments, and review upcoming due dates.
+
+![Cheque Management Dashboard](screenshots/cheque-dashboard.png)
+
+### 7. Accounting Document Management
+
+**Problem:** Accounting teams need organized access to financial documents to review recorded transactions and maintain structured accounting records.
+
+**Solution:** The document management interface lists accounting documents with their document numbers, dates, descriptions, and available actions. Users can also access the workflow for creating new accounting documents.
+
+**Business Value:** Makes accounting documents easier to locate, review, and manage.
+
+![Accounting Document Management](screenshots/accounting-documents.png)
 
 ## My Role & Contributions
 
