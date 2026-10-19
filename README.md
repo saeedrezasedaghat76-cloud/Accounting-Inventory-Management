@@ -41,6 +41,7 @@ This application provides a centralized environment for managing accounting and 
 - **Profit Reporting:** Review financial results by product, invoice, and date.
 - **Dashboard Analytics:** Monitor sales and profit trends, top-selling products, low-inventory alerts, and upcoming cheques.
 - **User & Role Management:** Manage user accounts, roles, role assignments, and role-associated claims.
+- **Accounting Documents & Double-Entry Bookkeeping:** Record accounting documents with debit and credit roles assigned to each financial transaction in the document details. Support recording individuals' salary and payroll transactions through accounting documents.
 
 ## Technical Stack
 
@@ -136,11 +137,11 @@ The following screenshots highlight selected areas of the application. Each exam
 
 ### 7. Accounting Document Management
 
-**Problem:** Accounting teams need organized access to financial documents to review recorded transactions and maintain structured accounting records.
+**Problem:** Accounting teams need an organized way to record financial transactions, maintain debit and credit details, and document payroll-related expenses.
 
-**Solution:** The document management interface lists accounting documents with their document numbers, dates, descriptions, and available actions. Users can also access the workflow for creating new accounting documents.
+**Solution:** The accounting document workflow allows users to record financial transactions with debit and credit roles specified in the document details for each transaction. It can also be used to record salary and payroll transactions for individuals through accounting documents.
 
-**Business Value:** Makes accounting documents easier to locate, review, and manage.
+**Business Value:** Supports structured financial recordkeeping, clearer tracking of debit and credit entries, and recording of salary-related transactions within the accounting workflow.
 
 ![Accounting Document Management](screenshots/accounting-documents.png)
 
