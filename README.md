@@ -162,9 +162,21 @@ I developed the application's backend and business functionality, working on:
 
 The application was deployed on **IIS** for a transportation company affiliated with **NGHSCO**.
 
+## Commercial Potential & Extensibility
+
+This application is designed as a business management solution that can be adapted and commercialized for different types of businesses, including companies operating in accounting, sales, purchasing, and inventory management.
+
+Its modular architecture and separation of responsibilities provide a foundation for future customization and extension. The system can be further developed to support a **multi-tenant architecture**, allowing multiple businesses to use the same application while keeping their data and business operations logically separated.
+
+With appropriate tenant isolation, configuration, and access control, this approach could support offering the application to multiple businesses as a commercial software solution, with business-specific settings and the flexibility to introduce new features as requirements evolve.
+
 ## Repository Notes
 
-This repository serves as a project showcase, presenting the application's purpose, architecture, key features, and selected screenshots.
+This repository serves as a showcase of a comprehensive accounting and inventory management system, highlighting its purpose, architecture, key features, and selected screenshots.
+
+The application includes nearly 50 pages covering a wide range of business operations, including accounting documents, sales and purchase invoices, payments, cheque management, inventory tracking, financial reporting, and user and role management.
+
+The system brings these capabilities together in one integrated application, providing businesses with a centralized solution for managing their accounting and inventory workflows.
 
 **The source code is not included in this public showcase.**
 
@@ -173,5 +185,5 @@ Only sanitized demonstration screenshots should be published. Confidential busin
 ## Contact
 
 - **GitHub:** [saeedrezasedaghat76-cloud](https://github.com/saeedrezasedaghat76-cloud)
-- **LinkedIn:** [Add your LinkedIn profile URL]
-- **Email:** [Add your professional email address]
+- **LinkedIn:** [Saeed Sedaghat](https://www.linkedin.com/in/saeed-sedaghat/)
+- **Email:** [sedaghatsaeedreza@yahoo.com](mailto:sedaghatsaeedreza@yahoo.com)
