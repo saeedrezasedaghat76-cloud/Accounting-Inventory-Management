@@ -160,7 +160,7 @@ I developed the application's backend and business functionality, working on:
 
 ## Deployment
 
-The application was deployed on **IIS** for a transportation company affiliated with **NGHSCO**.
+The application is designed as a web-based solution and can be deployed using IIS or Docker, providing flexibility across different hosting environments. It has also been deployed on IIS for a transportation company affiliated with NGHSCO.
 
 ## Commercial Potential & Extensibility
 
