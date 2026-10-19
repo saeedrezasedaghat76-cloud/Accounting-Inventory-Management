@@ -1,152 +1,219 @@
 # Accounting & Inventory Management System
 
-An integrated business management application designed for small and large businesses to manage accounting, financial transactions, sales and purchase invoices, payments, cheques, and inventory operations in one system.
+An integrated business management application built with **C#, ASP.NET Core, Entity Framework Core, and SQL Server** to support accounting operations, sales and purchase invoices, payments, cheque management, inventory tracking, and financial reporting.
 
-The application helps businesses organize financial records, track inventory movements, manage day-to-day transactions, and monitor business performance through financial reports and dashboard analytics.
+The system brings essential business operations together in one application, helping businesses organize financial records, manage products and stock movements, track outstanding cheques, and monitor financial performance through reports and dashboard analytics.
 
-This project demonstrates my experience developing business-oriented applications using C#, ASP.NET Core, Entity Framework Core, and SQL Server.
+This project demonstrates my experience developing business-oriented backend applications using **Clean Architecture, CQRS, Entity Framework Core, and ASP.NET Core Identity**.
 
-## Target Users
+## Business Problems & Solutions
 
-The system is designed to support businesses of different sizes and operational needs, including:
+Businesses often manage financial transactions, inventory, invoices, and reporting across separate workflows. This can make it harder to maintain organized records, track stock movements, monitor payments, and understand business performance.
 
-- **Business Owners and Managers:** Monitoring financial performance, sales, and inventory status.
-- **Accounting Staff:** Managing accounts, financial transactions, receipts, payments, and accounting documents.
-- **Sales and Purchasing Staff:** Managing sales and purchase invoices.
-- **Inventory Staff:** Managing products, tracking stock movements, and monitoring inventory levels.
-
-## Technical Stack
-
-- **Language:** C#
-- **Backend Framework:** ASP.NET Core
-- **Data Access:** Entity Framework Core
-- **Database:** Microsoft SQL Server
-- **Authentication & Authorization:** ASP.NET Core Identity
-- **Architecture:** Clean Architecture and CQRS
-
-## Architecture & Design
-
-The application follows Clean Architecture principles to separate business logic, application operations, infrastructure concerns, and presentation responsibilities. This structure helps organize the codebase, improve maintainability, and support future enhancements.
-
-### Solution Structure and CQRS
-
-The solution is organized into four projects: Domain, Application, Infrastructure, and Presentation. The Application layer uses commands and queries to organize supported operations, while the Infrastructure layer contains implementation details such as database access and Identity-related services.
-
-This separation helps keep application responsibilities organized and provides a structured foundation for accounting, sales, and inventory functionality.
-
-![Solution Structure and CQRS](screenshots/clean-architecture-solution.png)
-
-Key design areas include:
-
-- **Clean Architecture:** Separating application responsibilities into distinct layers.
-- **CQRS:** Organizing supported operations into commands and queries.
-- **Data Access:** Using Entity Framework Core to work with SQL Server.
-- **Business Logic:** Supporting accounting, sales, inventory, cheque tracking, and financial reporting workflows.
-
-## User & Role Permission Management
-
-The application uses ASP.NET Core Identity to manage users, roles, and role-associated claims. Administrators can create roles, assign users to roles, and configure permissions associated with specific application operations.
-
-### Role-Based Access Control
-
-Role-based access control helps organize authorization rules for different groups of users. By assigning users to appropriate roles and associating permissions with those roles, the application can organize access to different areas and operations.
-
-### Permission Management
-
-The permission management interface allows administrators to add permissions to a role and remove existing permissions when access requirements change.
-
-For example, the product-related permissions shown in the application include:
-
-- **View Products:** Permission associated with accessing the product listing operation.
-- **Add Products:** Permission associated with product creation.
-- **Edit Products:** Permission associated with product editing.
-- **Delete Products:** Permission associated with product deletion.
-
-### Implementation
-
-The backend uses `RoleManager<IdentityRole>` to create roles and manage role claims, while `UserManager<AppUser>` handles user creation and user-role assignments. Entity Framework Core integrates Identity entities with the application's database through `IdentityDbContext<AppUser>`.
-
-This implementation separates user management, role assignment, and role-claim configuration, making authorization-related data easier to organize and maintain.
-
-![Role Permission Management](screenshots/role-permission-management.png)
-
-## Product & Inventory Management
-
-### Product Management
-
-The product management interface provides an overview of the product catalog, including product names, product groups, prices, and available management actions.
-
-Centralizing product information helps organize inventory operations and provides a consistent reference for related business workflows, including sales and purchasing.
-
-From a development perspective, this feature demonstrates the management of product data and its relationships with product groups and other business entities.
-
-![Product Management](screenshots/product-management.png)
-
-### Inventory Movement Report
-
-The inventory movement report displays incoming and outgoing product quantities, related invoices, transaction dates, and warehouse information.
-
-This report helps users review stock movements and trace inventory activity associated with business transactions. It also provides visibility into how product quantities change across inventory operations.
-
-From a backend perspective, this feature demonstrates the presentation of inventory-related data and its relationships with products, invoice details, and warehouse accounts.
-
-![Inventory Movement Report](screenshots/inventory-movement-report.png)
-
-## Sales & Purchase Management
-
-### Sales Invoice
-
-The sales invoice interface demonstrates the workflow for creating and managing sales invoices.
-
-Sales invoicing is a core business operation that connects product sales with customer transactions and related business records. The application also includes related accounting and inventory functionality to support broader business operations.
-
-![Sales Invoice](screenshots/sales-invoice.png)
-
-## Dashboard & Analytics
-
-### Financial Overview
-
-The financial dashboard provides a consolidated view of daily and monthly sales and profit, inventory totals, sales invoice counts, and upcoming cheque due dates.
-
-By presenting these indicators in one place, the dashboard helps business users monitor key operational and financial information without navigating through individual sections.
-
-From a development perspective, this feature demonstrates the presentation of summarized business data from accounting, sales, inventory, and cheque-related operations.
-
-![Financial Overview](screenshots/financial-overview.png)
-
-### Sales & Inventory Analytics
-
-The analytics dashboard includes sales and profit charts for the last 30 days, top-selling products, and low-stock product monitoring.
-
-These insights help users review sales trends, identify top-performing products, and recognize inventory items that may require replenishment.
-
-The feature demonstrates how operational data can be summarized into visual reports to support business monitoring and decision-making.
-
-![Sales and Inventory Analytics](screenshots/sales-inventory-analytics.png)
+This application addresses these challenges by providing a centralized system for managing core accounting and inventory operations, with reporting features that help users review financial activity and inventory status.
 
 ## Key Features
 
-- **Sales & Purchase Management:** Manage sales and purchase invoices.
-- **Accounting Operations:** Manage accounts, accounting documents, receipts, and payments.
-- **Inventory Management:** Track product inventory and monitor low-stock items.
-- **Cheque Management:** View cheque information and identify upcoming due dates.
-- **Financial Reporting:** Review sales, profit, expenses, account details, and inventory-related reports.
-- **Dashboard Analytics:** View key business indicators and sales and profit trends.
-- **User & Role Management:** Manage users, assign roles, and configure role-associated claims.
+### 1. Accounting & Financial Documents
+
+- Manage accounts and accounting documents.
+- Review account-related financial activity.
+- Generate accounting reports using account and date filters.
+- Search and review financial records through dedicated reporting pages.
+
+**Business value:** Keeps accounting records organized and makes financial activity easier to review.
+
+### 2. Sales & Purchase Invoices
+
+- Create and manage sales and purchase invoices.
+- View invoice details and filter invoice lists by type and date.
+- Access invoice-related reports.
+- Print invoices using FastReport.
+- Support the creation of related receipt or payment records when requested during invoice processing.
+
+**Business value:** Organizes sales and purchasing records and supports related accounting workflows.
+
+### 3. Payments, Receipts & Expenses
+
+- Manage payment and receipt records.
+- Record expense-related payments.
+- View transaction details and manage financial records.
+- Filter payment and receipt reports by relevant criteria, including dates and accounts.
+
+**Business value:** Provides a structured way to review incoming and outgoing financial transactions.
+
+### 4. Cheque Management
+
+- Register cheques and manage cheque information.
+- Review cheque statuses, including registered, paid, and returned cheques.
+- Identify overdue and upcoming cheques.
+- Search cheque records and filter information by issue date and due date.
+
+**Business value:** Helps users monitor cheque obligations and review important payment dates.
+
+### 5. Product & Inventory Management
+
+- Manage products and product groups.
+- Review product information, including names and prices.
+- Access product inventory and warehouse inventory reports.
+- Review incoming and outgoing stock movements.
+- Search inventory activity using report filters.
+
+**Business value:** Makes product information and inventory movements easier to track and review.
+
+### 6. Profit & Financial Reporting
+
+- Generate profit reports for business operations.
+- Review reports by product, invoice, and date.
+- Filter financial results to examine specific transactions and reporting periods.
+
+**Business value:** Helps users examine financial results and understand profitability across products and transactions.
+
+### 7. Dashboard & Business Analytics
+
+- Review key financial and operational indicators.
+- Monitor sales and profit summaries.
+- View upcoming cheques due within the next seven days.
+- Explore sales and profit trends through dashboard charts.
+- Review top-selling products and low-inventory alerts.
+
+**Business value:** Brings important business indicators into one place, helping users monitor activity and identify areas that may require attention.
+
+### 8. User, Role & Permission Management
+
+- Manage user accounts and activation status.
+- Create and manage application roles.
+- Assign users to roles.
+- Configure role-associated claims and permissions.
+- Use ASP.NET Core Identity for user and role management.
+
+**Business value:** Supports structured user administration and role-based access management.
+
+## Technical Stack
+
+| Technology | Purpose |
+|---|---|
+| C# | Application logic and backend development |
+| ASP.NET Core | Web application and backend functionality |
+| Entity Framework Core | Data access and entity relationships |
+| SQL Server | Relational data storage |
+| ASP.NET Core Identity | User, role, and claims management |
+| Clean Architecture | Separation of application responsibilities |
+| CQRS | Organizing application operations into commands and queries |
+| Docker | Containerization tooling |
+| IIS | Application hosting and deployment |
+| FastReport | Invoice printing |
+
+## Architecture & Design
+
+The solution is organized into four main projects:
+
+- **Domain:** Core business entities and domain concepts.
+- **Application:** Application operations organized around commands and queries.
+- **Infrastructure:** Infrastructure concerns, including data access.
+- **Presentation:** The application interface and presentation logic.
+
+The project uses **Clean Architecture** to separate responsibilities and **CQRS** to organize commands and queries.
+
+This structure provides a clearer organization for business logic, data access, and application workflows as the system evolves.
+
+![Clean Architecture Solution](screenshots/clean-architecture-solution.png)
+
+## Project Screenshots
+
+### 1. Clean Architecture Solution
+
+**Problem:** As a business application grows, mixing business logic, data access, and presentation responsibilities can make maintenance more difficult.
+
+**Solution:** The solution separates the application into Domain, Application, Infrastructure, and Presentation projects, with commands and queries organized in the Application layer.
+
+**Business value:** Provides a clearer structure for maintaining and extending the application.
+
+![Clean Architecture Solution](screenshots/clean-architecture-solution.png)
+
+### 2. Role & Permission Management
+
+**Problem:** Different users need different levels of access to business operations.
+
+**Solution:** The application uses ASP.NET Core Identity to manage users, roles, and role-associated claims.
+
+**Business value:** Supports organized user administration and permission configuration.
+
+![Role & Permission Management](screenshots/role-permission-management.png)
+
+### 3. Product Management
+
+**Problem:** Product information can become difficult to maintain when records are managed inconsistently.
+
+**Solution:** The product management interface provides a centralized view of product records and related information.
+
+**Business value:** Makes product information easier to review and manage.
+
+![Product Management](screenshots/product-management.png)
+
+### 4. Inventory Movement Report
+
+**Problem:** Reviewing stock changes can be difficult without a clear record of incoming and outgoing inventory movements.
+
+**Solution:** The report presents inventory activity with related information such as quantities, invoices, dates, and warehouses.
+
+**Business value:** Helps users review stock movements and investigate inventory activity.
+
+![Inventory Movement Report](screenshots/inventory-movement-report.png)
+
+### 5. Sales Invoice
+
+**Problem:** Sales operations require organized invoice records that can be reviewed and maintained.
+
+**Solution:** The invoice interface supports sales invoice creation, management, and access to invoice details.
+
+**Business value:** Keeps sales documentation organized and accessible for related business workflows.
+
+![Sales Invoice](screenshots/sales-invoice.png)
+
+### 6. Financial Overview
+
+**Problem:** Reviewing financial and operational indicators separately can make it harder to understand the overall business situation.
+
+**Solution:** The dashboard brings key financial summaries and upcoming cheque information into one view.
+
+**Business value:** Helps users monitor important indicators without navigating through multiple reports.
+
+![Financial Overview](screenshots/financial-overview.png)
+
+### 7. Sales & Inventory Analytics
+
+**Problem:** Transaction records alone do not always make sales trends or inventory concerns easy to identify.
+
+**Solution:** Dashboard analytics include sales and profit charts, top-selling products, and low-inventory alerts.
+
+**Business value:** Supports business monitoring and helps identify products that may require replenishment.
+
+![Sales & Inventory Analytics](screenshots/sales-inventory-analytics.png)
 
 ## My Role
 
-I developed the application's backend and business functionality, working with application architecture, data access, user and role management, accounting workflows, inventory operations, and dashboard reporting.
+I developed the application's backend and business functionality, working with:
+
+- Application architecture and organization.
+- Data access and entity relationships.
+- Accounting documents and financial workflows.
+- Sales and purchase invoice management.
+- Payments, receipts, and cheque management.
+- Product and inventory reporting.
+- Dashboard and profit reporting.
+- User, role, and permission management.
+
+The application was deployed on IIS for a transportation company affiliated with NGHSCO.
 
 ## Project Showcase
 
-This repository presents selected screenshots and an overview of the project. The original application source code is not included.
+This repository presents an overview of the project, its architecture, key business features, and selected application screenshots.
+
+The source code is not included in this public showcase.
 
 ## Contact
 
-**Saeed Sedaghat**  
-.NET Backend Developer
-
-- [GitHub](https://github.com/saeedrezasedaghat76-cloud)
-- [LinkedIn](https://www.linkedin.com/in/saeed-sedaghat)
-- Email: sedaghatsaeedreza@yahoo.com
+- **GitHub:** [saeedrezasedaghat76-cloud](https://github.com/saeedrezasedaghat76-cloud)
+- **LinkedIn:** [Add your LinkedIn profile URL]
+- **Email:** [Add your professional email address]
