@@ -41,7 +41,8 @@ This application provides a centralized environment for managing accounting and 
 - **Profit Reporting:** Review financial results by product, invoice, and date.
 - **Dashboard Analytics:** Monitor sales and profit trends, top-selling products, low-inventory alerts, and upcoming cheques.
 - **User & Role Management:** Manage user accounts, roles, role assignments, and role-associated claims.
-- **Accounting Documents & Double-Entry Bookkeeping:** Record accounting documents with debit and credit roles assigned to each financial transaction in the document details. Support recording individuals' salary and payroll transactions through accounting documents.
+- **Accounting Documents & Double-Entry Bookkeeping:** Record accounting documents with debit and credit entries for each financial transaction. Support the recording of salary and payroll transactions through accounting documents.
+- **Invoice Printing & Reporting:** Generate and print invoice reports using FastReport.
 
 ## Technical Stack
 
@@ -56,7 +57,7 @@ This application provides a centralized environment for managing accounting and 
 | CQRS | Organization of commands and queries |
 | Docker | Containerization tooling |
 | IIS | Application hosting and deployment |
-| FastReport | Invoice printing |
+| FastReport | Invoice printing and report generation |
 
 ## Architecture & Design
 
